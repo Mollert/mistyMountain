@@ -1,0 +1,2 @@
+
+const produce = ["./image/produce/peppers.png", "./image/produce/squash.png", "./image/produce/zucchini.png", "./image/produce/pepperPlants.png", "./image/produce/peppers.png", "./image/produce/squash.png", "./image/produce/zucchini.png", "./image/produce/pepperPlants.png", "./image/produce/peppers.png", "./image/produce/squash.png", "./image/produce/zucchini.png", "./image/produce/pepperPlants.png"];

@@ -1,0 +1,138 @@
+
+@font-face { src: url("./assets/OregonLDOBoldOblique.ttf"); font-family: OBO; }
+
+html, body { margin: 0; padding: 0; font-family: OBO; }
+
+h1 { margin: 0; font-size: 2.6rem; }
+h2 { margin: 0; font-size: 2.2rem; }
+h3 { margin: 0; font-size: 1.8rem; }
+h4 { margin: 0; font-size: 1.4rem; }
+
+.mainBin {
+	width: 100vw;
+	height: auto;
+}
+
+#mainColor {
+	background-color: gainsboro;
+}
+
+#landColor {
+	background-color: navajowhite;
+	cursor: url("./assets/tree.cur"), auto;
+}
+
+#produceColor {
+	background-color: honeydew;
+	cursor: url("./assets/pepper.cur"), auto;	
+}
+
+#beesColor {
+	background-color: lemonchiffon;
+	cursor: url("./assets/bee.cur"), auto;	
+}
+
+#mmPicture {
+	width: 100vw;
+	height: 50vw;
+	background: url("./image/mistyMountain.png");
+	background-size: cover; 
+	border-top: 0.8rem solid saddlebrown;
+	border-bottom: 0.8rem solid saddlebrown;
+}
+
+.mainIntro {
+	text-align: center;
+}
+
+#introFirst {
+	margin: 2rem 0 0 0;
+}
+
+#introSecond {
+	margin: 0.6rem 0;
+}
+
+.mainExplaination {
+	margin: 1rem 4rem;
+}
+
+#landscapeLink:hover {
+	cursor: url("./assets/tree.cur"), auto;
+}
+
+#produceLink:hover {
+	cursor: url("./assets/pepper.cur"), auto;
+}
+
+#beesLink:hover {
+	cursor: url("./assets/bee.cur"), auto;
+}
+
+.links:hover {
+	color: saddlebrown;
+}
+
+/*----------Other Pages----------*/
+
+.insideBin {
+	padding: 3rem 4rem 0 4rem;
+}
+
+.pageIntro {
+	text-align: center;
+}
+
+.pageExplaination {
+	text-align: center;
+	margin: 0.6rem 0;
+}
+
+.forImg {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.imgWindow {
+	width: 12rem;
+	height: auto;
+	margin: 0.4rem;
+}
+
+.landBorder {
+	border: solid 0.2rem #D2691E;
+}
+
+.produceBorder {
+	border: solid 0.2rem #CD853F;
+}
+
+.beesBorder {
+	border: solid 0.2rem #FFD700;
+}
+
+/*----------Bottom lines for buffer----------*/
+
+.bottomLine {
+	width: 90vw;
+	height: 4rem;
+	margin: 4rem 5rem 0 5rem;
+}
+
+#mainLineColor {
+	border-top: 0.4rem solid #6495ed;
+}
+
+#landLineColor {
+	border-top: 0.4rem solid #D2691E;
+}
+
+#produceLineColor {
+	border-top: 0.4rem solid #CD853F;
+}
+
+#beesLineColor {
+	border-top: 0.4rem solid #FFD700;
+}

@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+
+	<title>Introducing Misty Mountain Berry's & Beans</title>
+	
+	<meta name="description" content="Describe website for search engines.">
+
+	<link rel="stylesheet" type="text/css" href="./indexCSS.css">
+	
+	<link rel="shortcut icon" href="./assets/beeFavicon.ico" type="image/x-icon">
+
+</head>
+<body>
+	<div id="beesColor" class="mainBin">
+		<div class="insideBin">
+
+			<div class="pageIntro"><h1>Honey Bees</h1></div>
+
+			<div class="pageExplaination"><h4>They are truly fascinating to work with.  Here are some of our brood!</h4></div>		
+
+			<div class="pageExplaination"><h4>Toto, I want to go back <a href="./index.html">home</a>.</h4></div>
+
+			<div class="pageExplaination"><h4>Click on a picture to enlarge it.  Then click the big picture to continue.</h4></div>
+
+			<div id="beesLarge"></div>
+
+			<div id="beesImg" class="forImg"></div>
+		</div>
+
+		<div id="beesLineColor" class="bottomLine"></div>
+	</div>
+
+	<script src="./uploads/bees.js"></script>
+	<script>		
+		let count = 0;
+		let xValue = 0;
+		let yValue = 0;
+
+		bees.forEach(pic => {
+			let postImg = document.createElement("img");
+			postImg.className = "imgWindow beesBorder";
+			postImg.src = pic;
+			postImg.alt = count;		
+			document.getElementById("beesImg").appendChild(postImg);
+
+			count++;
+		});
+
+		document.getElementById("beesImg").addEventListener("click", (event) => {
+
+//			console.log(event);
+//			console.log("event.pageX = " + event.pageX + " and event.pageY = " + event.pageY);
+			document.getElementById("beesLarge").innerHTML = "";
+
+			xValue = event.pageX;
+			yValue = event.pageY - event.clientY;
+
+			if (event.target.alt) {
+				let imgNumber = event.target.alt;
+				let postBig = document.createElement("img");
+				postBig.src = bees[imgNumber];
+				postBig.alt = "Big Picture";
+				postBig.style.width = "100%";
+				postBig.style.height = "auto";
+				postBig.style.border = "solid 0.6rem #FFD700"			
+				document.getElementById("beesLarge").appendChild(postBig);
+
+				window.scrollTo(0, 0);
+			}
+		});
+
+		document.getElementById("beesLarge").addEventListener("click", (event) => {
+
+//			console.log("event.pageX = " + event.pageX + " and event.pageY = " + event.pageY);
+
+			document.getElementById("beesLarge").innerHTML = "";
+
+			window.scrollTo(xValue, yValue);		
+		});
+	</script>
+</body>
+</html>

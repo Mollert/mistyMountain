@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+
+	<title>Introducing Misty Mountain Berry's & Beans</title>
+	
+	<meta name="description" content="Describe website for search engines.">
+
+	<link rel="stylesheet" type="text/css" href="./indexCSS.css">
+	
+	<link rel="shortcut icon" href="./assets/beeFavicon.ico" type="image/x-icon">
+
+</head>
+<body>
+	<div id="landColor" class="mainBin">
+		<div class="insideBin">
+			<div class="pageIntro"><h1>Landscape</h1></div>
+
+			<div class="pageExplaination"><h4>Here are some pictures to help you get a feel of and for this country.</h4></div>		
+
+			<div class="pageExplaination"><h4>Toto, I want to go back <a href="./index.html">home</a>.</h4></div>
+
+			<div class="pageExplaination"><h4>Click on a picture to enlarge it.  Then click the big picture to continue.</h4></div>
+
+			<div id="landLarge"></div>
+
+			<div id="landImg" class="forImg"></div>
+		</div>
+
+		<div id="landLineColor" class="bottomLine"></div>
+	</div>
+
+	<script src="./uploads/landscape.js"></script>
+	<script>		
+		let count = 0;
+		let xValue = 0;
+		let yValue = 0;
+
+		landscape.forEach(pic => {
+			let postImg = document.createElement("img");
+			postImg.className = "imgWindow landBorder";
+			postImg.src = pic;
+			postImg.alt = count;		
+			document.getElementById("landImg").appendChild(postImg);
+
+			count++;
+		});
+
+		document.getElementById("landImg").addEventListener("click", (event) => {
+
+//			console.log(event);
+//			console.log("event.pageX = " + event.pageX + " and event.pageY = " + event.pageY);
+			document.getElementById("landLarge").innerHTML = "";
+
+			xValue = event.pageX;
+			yValue = event.pageY - event.clientY;
+
+			if (event.target.alt) {
+				let imgNumber = event.target.alt;
+				let postBig = document.createElement("img");
+				postBig.src = landscape[imgNumber];
+				postBig.alt = "Big Picture";
+				postBig.style.width = "100%";
+				postBig.style.height = "auto";
+				postBig.style.border = "solid 0.6rem #D2691E"			
+				document.getElementById("landLarge").appendChild(postBig);
+
+				window.scrollTo(0, 0);
+			}
+		});
+
+		document.getElementById("landLarge").addEventListener("click", (event) => {
+
+//			console.log("event.pageX = " + event.pageX + " and event.pageY = " + event.pageY);
+
+			document.getElementById("landLarge").innerHTML = "";
+
+			window.scrollTo(xValue, yValue);		
+		});
+	</script>
+</body>
+</html>

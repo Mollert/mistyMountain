@@ -1,0 +1,2 @@
+
+const landscape = ["./image/landscape/mountainView.png", "./image/landscape/landRow.png", "./image/landscape/pastureView.png", "./image/landscape/wildlife.png", "./image/landscape/mountainView.png", "./image/landscape/landRow.png", "./image/landscape/pastureView.png", "./image/landscape/wildlife.png", "./image/landscape/mountainView.png", "./image/landscape/landRow.png", "./image/landscape/pastureView.png", "./image/landscape/wildlife.png"];
