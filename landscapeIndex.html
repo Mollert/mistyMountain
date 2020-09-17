@@ -16,7 +16,7 @@
 
 </head>
 <body>
-	<div id="landColor" class="mainBin">
+	<div id="landColor">
 		<div class="insideBin">
 			<div class="pageIntro"><h1>Landscape</h1></div>
 
@@ -64,7 +64,7 @@
 				let postBig = document.createElement("img");
 				postBig.src = landscape[imgNumber];
 				postBig.alt = "Big Picture";
-				postBig.style.width = "100%";
+				postBig.style.width = "calc(100% - 1.2rem)";
 				postBig.style.height = "auto";
 				postBig.style.border = "solid 0.6rem #D2691E"			
 				document.getElementById("landLarge").appendChild(postBig);

@@ -16,7 +16,7 @@
 
 </head>
 <body>
-	<div id="produceColor" class="mainBin">
+	<div id="produceColor">
 		<div class="insideBin">
 
 			<div class="pageIntro"><h1>Produce</h1></div>
@@ -64,7 +64,7 @@
 				let postBig = document.createElement("img");
 				postBig.src = produce[imgNumber];
 				postBig.alt = "Big Picture";
-				postBig.style.width = "100%";
+				postBig.style.width = "calc(100% - 1.2rem)";
 				postBig.style.height = "auto";
 				postBig.style.border = "solid 0.6rem #CD853F"			
 				document.getElementById("produceLarge").appendChild(postBig);

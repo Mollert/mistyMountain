@@ -16,7 +16,7 @@
 
 </head>
 <body>
-	<div id="beesColor" class="mainBin">
+	<div id="beesColor">
 		<div class="insideBin">
 
 			<div class="pageIntro"><h1>Honey Bees</h1></div>
@@ -65,7 +65,7 @@
 				let postBig = document.createElement("img");
 				postBig.src = bees[imgNumber];
 				postBig.alt = "Big Picture";
-				postBig.style.width = "100%";
+				postBig.style.width = "calc(100% - 1.2rem)";
 				postBig.style.height = "auto";
 				postBig.style.border = "solid 0.6rem #FFD700"			
 				document.getElementById("beesLarge").appendChild(postBig);
